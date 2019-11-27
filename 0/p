@@ -35,6 +35,11 @@ boundaryField
         type            fixedValue;
         value           uniform 0;
     }
+    potato_center
+    {
+        type            fixedValue;
+        value           uniform 1000;
+    }
 }
 
 
