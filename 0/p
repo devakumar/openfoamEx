@@ -22,23 +22,33 @@ internalField   uniform 1000;
 
 boundaryField
 {
-    back_face
+    front_face
     {
         type            empty;
     }
-    front_face
+    back_face
     {
         type            empty;
     }
     potato_surface
     {
         type            fixedValue;
-        value           uniform 0;
+        value           uniform 113;
     }
     potato_center
     {
         type            fixedValue;
-        value           uniform 1000;
+        value           uniform 113;
+    }
+    oven_boundary
+    {
+        type            fixedValue;
+        value           uniform 3;
+    }
+    defaultFaces
+    {
+        type            fixedValue;
+        value           uniform 113;
     }
 }
 

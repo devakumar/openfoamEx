@@ -60,6 +60,10 @@ Physical Volume("potato_volume") = {1};
 //+
 Physical Volume("oven_volume") = {2};
 
+//+
+Physical Surface("back_face") = {20, 14};
+//+
+Physical Surface("front_face") = {8, 1};
 
 Mesh.ScalingFactor=0.005; 
 
