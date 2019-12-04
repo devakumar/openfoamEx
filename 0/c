@@ -9,15 +9,48 @@ FoamFile
 {
     version     2.0;
     format      ascii;
-    class       dictionary;
-    location    "constant";
-    object      transportProperties;
+    class       volScalarField;
+    location    "0";
+    object      c;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-k              1e-14;
-mu             1e-4;
-Dc	       1e-7;
+dimensions      [1 -3 0 0 0 0 0];
+
+
+internalField   uniform 0.02;
+
+boundaryField
+{
+    front_face
+    {
+        type            empty;
+    }
+    back_face
+    {
+        type            empty;
+    }
+    potato_surface
+    {
+        type            fixedValue;
+        value           uniform 2.00;
+    }
+    potato_center
+    {
+        type            fixedValue;
+        value           uniform 2.00;
+    }
+    oven_boundary
+    {
+        type            fixedValue;
+        value           uniform 0.06;
+    }
+    defaultFaces
+    {
+        type            fixedValue;
+        value           uniform 2.00;
+    }
+}
 
 
 // ************************************************************************* //

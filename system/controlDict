@@ -15,7 +15,7 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-application     darcyFoam;
+application     darcyOvenFoam;
 
 startFrom       latestTime;
 
@@ -44,6 +44,8 @@ timeFormat      general;
 timePrecision   6;
 
 runTimeModifiable true;
+
+libs ("ldarcyGradPressure.so");
 
 
 // ************************************************************************* //

@@ -18,7 +18,7 @@ FoamFile
 dimensions      [1 -1 -2 0 0 0 0];
 
 
-internalField   uniform 1000;
+internalField   uniform 0;
 
 boundaryField
 {
@@ -32,23 +32,21 @@ boundaryField
     }
     potato_surface
     {
-        type            fixedValue;
-        value           uniform 113;
+        type            darcyGradPressure;
     }
     potato_center
     {
         type            fixedValue;
-        value           uniform 113;
+        value           uniform 1000;
     }
     oven_boundary
     {
         type            fixedValue;
-        value           uniform 3;
+        value           uniform 0;
     }
     defaultFaces
     {
-        type            fixedValue;
-        value           uniform 113;
+        type            darcyGradPressure;
     }
 }
 

@@ -35,6 +35,7 @@ laplacianSchemes
 {
     default         none;
     laplacian((k|mu),p) Gauss linear corrected;
+    laplacian(Dc,c) Gauss linear corrected;
 }
 
 interpolationSchemes
@@ -47,5 +48,10 @@ snGradSchemes
     default         corrected;
 }
 
+fluxRequired
+{
+    default          no;
+    p			;
+}
 
 // ************************************************************************* //
